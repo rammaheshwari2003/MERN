@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="gray">
+
+        <a href="/students/home"> Home </a> |
+        <a href="/students/insert"> Insert </a> |
+        <a href="/students/display"> Display </a> 
+       
+        <hr size="4" color="red">
+        <h1>Display</h1>
+
+        <!-- <% %> = Output statement-->
+         <table border="1" width="100%" style="text-align: center">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Fees</th>
+            </tr>
+
+        <%
+            MyData.forEach((key)=>{
+        %>
+                <tr>
+                    <td><%= key.rollno %></td>
+                    <td><%= key.name %></td>
+                    <td><%= key.city %></td>
+                    <td><%= key.fees %></td>
+                </tr>
+        <%
+            })
+        %>
+
+        <!-- <h1> <%= MyData[1].name %> </h1> -->
+
+
+    </table>
+
+        <hr size="4" color="red">
+
+    
+</body>
+</html>
