@@ -1,0 +1,46 @@
+#table{
+
+    width:60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+
+
+}
+#edit{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight:bolder
+}
+
+#delete{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight:bolder
+}
+#table{
+    width:60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+#foot{
+    display: flex;
+    gap: 50px;
+}
+#myForm
+{
+    width: 450px;
+    margin:  auto;
+}
