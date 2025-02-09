@@ -5,7 +5,7 @@ import { message } from "antd";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
-
+ 
 const Edit = () => {
 
     const { id } = useParams();
