@@ -13,7 +13,7 @@ const todoSlice=createSlice({
         delTask:(state, actions)=>{
             state.Task=state.Task.filter((key)=> key.id != actions.payload.id );
         },
-
+ 
         taskComp:(state, actions)=>{
             for(var i=0; i<state.Task.length; i++){
                 if(state.Task[i].id==actions.payload.id){
