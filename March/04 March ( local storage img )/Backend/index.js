@@ -8,7 +8,7 @@ require("dotenv").config();
 
 app.use(cors());
 // Parse incoming requests with JSON payloads
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 // Parse incoming requests with urlencoded payloads
 app.use(bodyParser.urlencoded({ extended: true }));
 
