@@ -1,49 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 const Display = () => {
-  const [apiData, setApiData] = useState([]);
+  const [data, setData]=useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:8000/user/display"); 
-        setApiData(response.data); 
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
 
-    fetchData();
-  }, []);
+  const loadData=async()=>{
+    let api="http://localhost:8000/employee/display";
+    const response=await axios.get(api);
+    setData(response.data);
+  }
 
-  const ans=apiData.map((item)=>{
-    return(
-      <>
-      <tr>
-        <td>{item.name}</td>
-        <td>{item.rollno}</td>
-        <td>{item.city}</td>
-        <td><img src={item.imgurl} alt="" width="100px" height="100px"/> </td>
-      </tr>
-      
-      
-      
-      </>
-    )
+  useEffect(()=>{
+    loadData();
+  },[])
 
+  const ans=data.map((key)=>{
+    <tr>
+      <td>{key.id}</td>
+      <td>{key.name}</td>
+      <td>{key.designation}</td>
+      <td>{key.salary}</td>
+      <td><img src={key.images}  /></td>
+    </tr>
   })
+  
   return (
     <>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>City</th>
-        <th>Image</th>
-      </tr>
-      {ans}
-    </table>
+    <h1>Employee Data Display</h1>
+    <hr />
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        {ans}
+      </table>
+
     
     </>
   )

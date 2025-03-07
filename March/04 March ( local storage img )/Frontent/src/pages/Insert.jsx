@@ -21,7 +21,7 @@ const Insert=()=>{
  const handleSubmit=async()=>{
   let api="http://localhost:8000/employee/insert";
     let formData=new FormData();
-    formData.append("id",input.id);
+    formData.append("id",input.empid);
     formData.append("name", input.name);
     formData.append("designation", input.designation);
     formData.append("salary", input.salary);
@@ -37,7 +37,7 @@ const Insert=()=>{
         <center>
           <h1>Employee Data Insert</h1><hr />
 
-          Enter Employee Id : <input type="text" name="id" onChange={handleInput} /> <br />
+          Enter Employee Id : <input type="text" name="empid" onChange={handleInput} /> <br />
           Enter Employee Name : <input type="text" name="name" onChange={handleInput} /> <br />
           Enter Employee Designation : <input type="text"name="designation" onChange={handleInput} /> <br />
           Enter Employee Salary : <input type="text" name="salary" onChange={handleInput} /> <br />
