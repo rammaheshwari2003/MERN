@@ -1,0 +1,31 @@
+
+
+#TopHeader{
+
+   background-color: cadetblue; 
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+
+    #topIcons{
+        display: flex;
+        gap: 20px;
+        font-size: 25px;
+        color: white;
+        padding-right: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
