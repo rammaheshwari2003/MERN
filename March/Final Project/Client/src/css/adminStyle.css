@@ -1,5 +1,6 @@
+
 /* ---- Admin Login ---- */
-  #adminLogin {
+#adminLogin {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -124,6 +125,7 @@
     /* width: 20%; */
     font-size: 20px;
     /* position:absolute; */
+    height: 685px;
 
     #adminSideNav{
         ul{
@@ -164,7 +166,7 @@
 
   #sideBar{
     width: 20%;
-  }
+ }
 
   #outlet{
     width: 80%;

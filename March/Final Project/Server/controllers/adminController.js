@@ -18,6 +18,15 @@ const AdminLogin=async(req, res)=>{
 
 
 
+
+
+const AddProduct=async(req, res)=>{
+    console.log(req.body);
+    res.send("ok");
+}
+
+
 module.exports={
-    AdminLogin
+    AdminLogin,
+    AddProduct
 };
