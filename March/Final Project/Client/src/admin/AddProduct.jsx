@@ -18,8 +18,19 @@ const AddProduct=()=>{
     }
     const handleSubmit=async(e)=>{
         e.preventDefault();
-       let api=`${Base_Url}/admin/addproduct`;
-       let response=await axios.post(api,{input,image});
+         let api=`${Base_Url}/admin/addproduct`;
+
+        const formData=new FormData();
+        
+        for(let key in input){
+          formData.append(key, input[key]);
+        }
+        
+        for(let i=0; i<image.length; i++){
+           formData.append("image", image[i]);
+        }
+       let response=await axios.post(api,formData,{
+        headers: { 'Content-Type': 'multipart/form-data' },});
        console.log(response.data);
         
     }
