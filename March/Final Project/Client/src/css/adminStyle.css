@@ -8,7 +8,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  
+    background-color: #e3f2fd;
+    
   #adminLoginForm {
     background-color: #ffffff;
     border-radius: 8px;
@@ -17,6 +18,7 @@
     max-width: 400px;
     width: 100%;
     border: 2px solid black;
+    background: transparent;
   
   h1 {
     text-align: center;
@@ -96,7 +98,8 @@
 /* ---- Admin ---- */
 
 #adminTopMenu{
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: #343a40;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -106,6 +109,7 @@
         font-size: 30px;
         padding-right: 20px;
         cursor: pointer;
+        padding: 10px;
         h4{
         display: flex;
         gap: 10px;
@@ -121,7 +125,9 @@
 
 
 #adminSideMenu{
-    background-color:thistle;
+  background-color: #1e1e2f;
+  
+    /* background-color:thistle; */
     /* width: 20%; */
     font-size: 20px;
     /* position:absolute; */
@@ -129,17 +135,29 @@
 
     #adminSideNav{
         ul{
+          
             display: flex;
             flex-direction: column;
             gap: 20px;
 
             a{
-               color: black;
+              padding-top: 20px;
+               color: white;
                display: flex;
                gap: 20px;
                text-decoration: none;
                font-weight: 500;
+               font-size: 25px;
+
+               &:hover{
+                color: #00b351;
+               }
             }
+      #sideIcon{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 5px;
+      }
             
         }
     }
@@ -155,9 +173,13 @@
 
 
 #adminHome{
-    /* width: 80%;
-    margin-left: 20%; */
-    background-color:yellow;
+    background-color: gray;
+    text-align: center;
+    margin: 50px auto auto auto;
+    width: 300px;
+    height: 100px;
+    padding-top: 20px;
+    border-radius: 5px;
 }
 
 #SideOutler{
@@ -171,4 +193,88 @@
   #outlet{
     width: 80%;
   }
+}
+
+
+
+
+
+
+/* ----- Add Product ----- */
+
+#AddProduct{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    
+#AddProductForm{
+  
+    label{
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 10px;
+        padding: 30px;
+    }
+    input{
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-right: 20px;
+        width: 400px;
+    }
+    button{
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 50%;
+        text-align: center;
+        margin: 50px 200px 20px 300px;
+
+        &:hover{
+            background-color: #00b351;
+          }
+    }
+}
+}
+
+
+
+/* ----- Reset Password ----- */
+
+#resetForm{
+
+  text-align: center;
+    
+  label{
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: 10px;
+      padding: 30px;
+  }
+  input{
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-right: 20px;
+      width: 400px;
+  }
+  button{
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 50px;
+      cursor: pointer; 
+  }
+
 }

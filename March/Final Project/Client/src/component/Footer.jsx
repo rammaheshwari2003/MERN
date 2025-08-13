@@ -4,7 +4,7 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 const Footer=()=> {
   return (
     <>
-    <MDBFooter bgColor='primary' className='text-center text-lg-start text-muted'>
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         
 
@@ -36,12 +36,12 @@ const Footer=()=> {
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon color='secondary' icon='gem' className='me-3' />
-                Company name
+                BookBazar
               </h6>
-              <p>
+              {/* <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
                 amet, consectetur adipisicing elit.
-              </p>
+              </p> */}
             </MDBCol>
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>

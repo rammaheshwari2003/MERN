@@ -5,5 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/style.css";
 import "./css/adminStyle.css";
 
-
-createRoot(document.getElementById("root")).render(<App />);
+import store from "./store";
+import { Provider } from "react-redux";
+import LoginContext from "./LoginContext";
+createRoot(document.getElementById("root")).render(
+    <Provider store={store}>
+        <LoginContext>
+          <App />
+        </LoginContext>
+    </Provider>
+);

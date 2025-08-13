@@ -2,7 +2,7 @@ const AdminHome=()=>{
     return(
         <>
         <div id="adminHome">
-        <h1>Admin Home</h1>
+        <h1>Welcome</h1>
         </div>
         
         </>

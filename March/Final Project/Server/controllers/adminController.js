@@ -1,6 +1,6 @@
 const adminModel=require("../models/adminModel");
 const productModel=require("../models/productModel");
-
+const OrderModel=require("../models/orderModel");
 const AdminLogin=async(req, res)=>{
     const {adminId, adminPass}=req.body;
     try {
@@ -35,7 +35,54 @@ const AddProduct=async(req, res)=>{
 }
 
 
+const GetProduct=async(req, res)=>{
+    const Order= await OrderModel.find();
+    res.status(200).send(Order);
+}
+
+
+const GetProductData=async(req, res)=>{
+        const AllProduct=await productModel.find();
+        res.send(AllProduct);
+}
+
+const DeleteProduct=async(req, res)=>{
+        const {id}=req.query;
+        const deleteItem=await productModel.findByIdAndDelete({_id:id});
+        res.send({msg:"Product Deleted"});    
+}
+
+const GetProductDetails=async(req, res)=>{
+        const {id}=req.query;
+        const findProductDetail=await productModel.findById({_id:id});
+        res.send(findProductDetail);
+}
+
+const EditProduct=async(req, res)=>{
+    console.log(req.body);
+    console.log(req.files);
+}
+
+const ChangePassword=async(req, res)=>{
+        const {oldpassword,newpassword,adminName}=req.body;   
+        const findAdmin=await adminModel.findOne({name:adminName});  
+        if(findAdmin.adminPass != oldpassword){
+            res.send({status:500,oldPssErr:"Invalid old Password"})
+        }
+        if(findAdmin.adminPass == oldpassword && {name:adminName}){
+            let changePass=await adminModel.updateOne({adminPass:newpassword})
+            res.send({status:200,msg:"Password Change Successfully"});
+            
+        }
+}
+
 module.exports={
     AdminLogin,
-    AddProduct
+    AddProduct,
+    GetProduct,
+    GetProductData,
+    DeleteProduct,
+    GetProductDetails,
+    EditProduct,
+    ChangePassword
 };

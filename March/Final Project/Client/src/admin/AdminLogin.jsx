@@ -3,7 +3,7 @@ import { message } from 'antd';
 import Base_Url from "../config/Base_Url";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import i1 from "../images/i1.jpg"
 const AdminLogin=()=>{
     const[adminId,setAdminId ]=useState("");
     const[adminPass,setadminPass ]=useState("");
@@ -32,6 +32,7 @@ const AdminLogin=()=>{
     return(
         <>
             <div id="adminLogin">
+                {/* <img src={i1}  /> */}
                 <div id="adminLoginForm">
               <h1>Admin Login</h1> <hr />
                     <form>
